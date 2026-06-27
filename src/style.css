@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'FontGrande';
+  src: url('./assets/fonts/FontGrande-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'LineSeed';
+  src: url('./assets/fonts/LINESeedJP-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MyfontFuck';
+  src: url('./assets/fonts/MyfontFuck-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --font-grande: 'FontGrande', sans-serif;
+  --font-testo: 'LineSeed', sans-serif;
+  --font-fuck: 'MyfontFuck', sans-serif;
+}
+
+body {
+  background-color: #FFFCE0;
+}
+
