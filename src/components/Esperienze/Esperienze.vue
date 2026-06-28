@@ -1,13 +1,40 @@
 <script setup>
-import EsperienzeTitolo from './EsperienzeTitolo.vue'
-import EsperienzeElenco from './EsperienzeElenco.vue'
+import BarraEsperienza from './BarraEsperienza.vue'
 import ContattaciOra from '../ContattaciOra.vue'
-import EsperienzeFooter from './EsperienzeFooter.vue'
+import Footer from '../Homepage/Footer.vue'
+import vecchiettovaligia from '../../assets/esperienze/vecchiettovaligia.png'
 </script>
 
 <template>
-  <EsperienzeTitolo />
-  <EsperienzeElenco />
+
+  <!-- Titolo -->
+  <section class="text-center px-8 py-16">
+    <h1 class="font-grande text-[96px] leading-tight uppercase">
+      le nostre<br />esperienze
+    </h1>
+  </section>
+
+  <!-- Elenco esperienze -->
+  <section class="flex flex-col px-8 py-10 w-full max-w-[1200px] mx-auto">
+    <hr class="border-t-2 border-black mb-4" />
+    <BarraEsperienza titolo="Volo all'alba"      minuti="60 min" colore="#FFDD32" to="/alba" />
+    <hr class="border-t-2 border-black my-4" />
+    <BarraEsperienza titolo="Love is in the air" minuti="90 min" colore="#FF7FD4" to="/love" />
+    <hr class="border-t-2 border-black my-4" />
+    <BarraEsperienza titolo="Enjoint flight"     minuti="75 min" colore="#00D312" to="/enjoint" />
+    <hr class="border-t-2 border-black my-4" />
+    <BarraEsperienza titolo="Jump no scare"      minuti="45 min" colore="#3DD8FC" to="/jump" />
+    <hr class="border-t-2 border-black mt-4" />
+  </section>
+
+  <!-- CTA -->
   <ContattaciOra />
-  <EsperienzeFooter />
+
+  <!-- Immagine decorativa -->
+  <section class="flex justify-end px-8 pb-10">
+    <img :src="vecchiettovaligia" alt="" class="w-[200px] h-auto" />
+  </section>
+
+  <Footer />
+
 </template>

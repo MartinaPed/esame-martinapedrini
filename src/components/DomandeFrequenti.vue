@@ -6,15 +6,15 @@ import freccianera from '../assets/freccianera.png'
   <section class="flex flex-col items-center gap-4 px-16 py-10">
 
     <!-- Scarico di responsabilità -->
-    <div class="bg-[#FFDD32] rounded-full px-6 py-2">
+    <router-link to="/scarico-responsabilita" class="bg-[#FFDD32] rounded-full px-6 py-2 cursor-pointer">
       <span class="font-grande text-[32px] uppercase">SCARICO DI RESPONSABILITÀ</span>
-    </div>
+    </router-link>
 
     <!-- Barra rossa domande frequenti -->
-    <div class="flex items-center justify-between bg-[#cc0000] rounded-full px-10 py-4 w-full">
+    <router-link to="/domande-frequenti" class="flex items-center justify-between bg-[#cc0000] rounded-full px-10 py-4 w-full cursor-pointer">
       <span class="font-fuck text-[96px] text-white leading-none">domande frequenti</span>
       <img :src="freccianera" alt="" class="w-[200px] h-auto rotate-[-45deg]" />
-    </div>
+    </router-link>
 
   </section>
 </template>

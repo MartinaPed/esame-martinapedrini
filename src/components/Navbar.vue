@@ -12,10 +12,7 @@ const scrolled = ref(false)
 const paginaAlba = computed(() => route.path === '/alba')
 
 const logoCorrente = computed(() => paginaAlba.value ? logogiallo : logo)
-const sfondoNav = computed(() => {
-  if (paginaAlba.value) return 'bg-transparent'
-  return scrolled.value ? 'bg-[#FFFCE0]' : 'bg-transparent'
-})
+const sfondoNav = computed(() => scrolled.value ? 'bg-[#FFFCE0]' : 'bg-transparent')
 
 function handleScroll() {
   scrolled.value = window.scrollY > 50
@@ -32,7 +29,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   >
     <!-- Logo: porta alla homepage -->
     <router-link to="/">
-      <img :src="logoCorrente" alt="Nada Mas" class="h-[183px] w-[183px]" />
+      <img :src="logoCorrente" alt="Nada Mas" class="h-[100px] w-[100px]" />
     </router-link>
 
     <!-- Link: font 65px -->
@@ -46,7 +43,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
       <li class="flex items-center gap-[13px]">
         <a href="https://wa.me/" target="_blank" class="flex items-center gap-[13px] cursor-pointer transition-colors hover:text-[#ff0000]">
           contattaci
-          <img :src="whatsapp" alt="WhatsApp" class="h-[55px] w-[55px]" />
+          <img :src="whatsapp" alt="WhatsApp" class="h-[55px] w-auto" />
         </a>
       </li>
       <li>

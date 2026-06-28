@@ -24,24 +24,10 @@ function invia() {
         facci sapere cosa ne pensi tu
       </h2>
 
-      <!-- Icona + / × fatta con due linee -->
-      <div class="relative w-[60px] h-[60px] shrink-0">
-        <!-- linea orizzontale: sparisce quando aperto -->
-        <span
-          class="absolute top-1/2 left-0 w-full h-[6px] bg-[#ff0000] -translate-y-1/2 transition-all duration-300"
-          :class="aperto ? 'opacity-0' : 'opacity-100'"
-        ></span>
-        <!-- linea verticale: ruota di 45° quando aperto -->
-        <span
-          class="absolute left-1/2 top-0 h-full w-[6px] bg-[#ff0000] -translate-x-1/2 transition-all duration-300"
-          :class="aperto ? 'rotate-45' : 'rotate-0'"
-        ></span>
-        <!-- seconda barra della ×: appare solo quando aperto -->
-        <span
-          class="absolute left-1/2 top-0 h-full w-[6px] bg-[#ff0000] -translate-x-1/2 transition-all duration-300"
-          :class="aperto ? 'rotate-[-45deg] opacity-100' : 'rotate-0 opacity-0'"
-        ></span>
-      </div>
+      <!-- Icona + / x in font-fuck -->
+      <span class="font-fuck text-[80px] leading-none text-[#ff0000]">
+        {{ aperto ? 'x' : '+' }}
+      </span>
     </div>
 
     <!-- Contenuto: appare solo quando aperto -->

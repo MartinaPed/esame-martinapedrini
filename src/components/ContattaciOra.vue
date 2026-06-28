@@ -28,7 +28,7 @@ import frecciabassodx from '../assets/cta/frecciabassodx.png'
         <div class="relative flex flex-col items-center justify-center gap-2">
           <span class="font-grande text-[60px] leading-none">CONTATTACI</span>
           <span class="flex items-center gap-3 font-grande text-[60px] leading-none">
-            <img :src="wh" alt="WhatsApp" class="w-[80px] h-[80px]" />
+            <img :src="wh" alt="WhatsApp" class="w-[80px] h-auto" />
             ORA!!
           </span>
         </div>
