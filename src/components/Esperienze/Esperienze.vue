@@ -8,14 +8,14 @@ import vecchiettovaligia from '../../assets/esperienze/vecchiettovaligia.png'
 <template>
 
   <!-- Titolo -->
-  <section class="text-center px-8 py-16">
-    <h1 class="font-grande text-[96px] leading-tight uppercase">
+  <section class="text-center px-4 md:px-8 py-10 md:py-16">
+    <h1 class="font-grande text-[60px] md:text-[80px] lg:text-[96px] leading-tight uppercase">
       le nostre<br />esperienze
     </h1>
   </section>
 
   <!-- Elenco esperienze -->
-  <section class="flex flex-col px-8 py-10 w-full max-w-[1200px] mx-auto">
+  <section class="flex flex-col px-4 md:px-8 py-6 md:py-10 w-full max-w-[1200px] mx-auto">
     <hr class="border-t-2 border-black mb-4" />
     <BarraEsperienza titolo="Volo all'alba"      minuti="60 min" colore="#FFDD32" to="/alba" />
     <hr class="border-t-2 border-black my-4" />
@@ -31,8 +31,8 @@ import vecchiettovaligia from '../../assets/esperienze/vecchiettovaligia.png'
   <ContattaciOra />
 
   <!-- Immagine decorativa -->
-  <section class="flex justify-end px-8 pb-10">
-    <img :src="vecchiettovaligia" alt="" class="w-[200px] h-auto" />
+  <section class="flex justify-end px-4 md:px-8 pb-6 md:pb-10">
+    <img :src="vecchiettovaligia" alt="" class="w-[120px] md:w-[200px] h-auto" />
   </section>
 
   <Footer />

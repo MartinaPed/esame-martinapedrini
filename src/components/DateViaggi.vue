@@ -93,58 +93,58 @@ const date = {
 </script>
 
 <template>
-  <section class="flex flex-col items-center px-16 py-10 max-w-[900px] mx-auto">
+  <section class="flex flex-col items-center px-4 md:px-16 py-8 md:py-10 max-w-[900px] mx-auto">
 
     <!-- Titolo + X -->
-    <div class="flex items-center justify-between w-full mb-10">
-      <h1 class="font-fuck text-[96px]">DATE DISPONIBILI</h1>
-      <button @click="router.go(-1)" class="font-fuck text-[96px] text-[#ff0000] cursor-pointer leading-none">×</button>
+    <div class="flex items-center justify-between w-full mb-6 md:mb-10">
+      <h1 class="font-fuck text-[40px] md:text-[72px] lg:text-[96px]">DATE DISPONIBILI</h1>
+      <button @click="router.go(-1)" class="font-fuck text-[50px] md:text-[96px] text-[#ff0000] cursor-pointer leading-none">×</button>
     </div>
 
     <!-- Navigazione mese -->
-    <div class="flex items-center gap-8 mb-10">
+    <div class="flex items-center gap-4 md:gap-8 mb-6 md:mb-10">
       <button @click="mesePrecedente" :disabled="meseCorrente === 0" class="cursor-pointer disabled:opacity-30">
-        <img :src="freccianerasx" alt="" class="w-[60px] h-auto" />
+        <img :src="freccianerasx" alt="" class="w-[35px] md:w-[60px] h-auto" />
       </button>
-      <span class="font-fuck text-[72px]">{{ mesi[meseCorrente] }}</span>
+      <span class="font-fuck text-[40px] md:text-[72px]">{{ mesi[meseCorrente] }}</span>
       <button @click="meseSucessivo" :disabled="meseCorrente === 11" class="cursor-pointer disabled:opacity-30">
-        <img :src="freccianeradx" alt="" class="w-[60px] h-auto" />
+        <img :src="freccianeradx" alt="" class="w-[35px] md:w-[60px] h-auto" />
       </button>
     </div>
 
     <!-- Card date -->
-    <div class="flex flex-col gap-6 w-full">
+    <div class="flex flex-col gap-4 md:gap-6 w-full">
       <div
         v-for="(d, i) in date[meseCorrente]"
         :key="i"
-        class="rounded-[32px] border-4 px-6 py-1"
+        class="rounded-[20px] md:rounded-[32px] border-4 px-4 md:px-6 py-1"
         :style="{ borderColor: d.colore }"
       >
         <div class="flex items-center justify-between mb-1">
           <div>
-            <p class="font-fuck text-[56px]">{{ d.data }}</p>
-            <p class="font-fuck text-[48px]">{{ d.orario }}</p>
+            <p class="font-fuck text-[28px] md:text-[44px] lg:text-[56px]">{{ d.data }}</p>
+            <p class="font-fuck text-[24px] md:text-[36px] lg:text-[48px]">{{ d.orario }}</p>
           </div>
           <button
-            class="font-fuck text-[36px] text-white rounded-full px-6 py-2 cursor-pointer"
+            class="font-fuck text-[18px] md:text-[28px] lg:text-[36px] text-white rounded-full px-3 md:px-6 py-1 md:py-2 cursor-pointer"
             :style="{ backgroundColor: d.colore }"
           >
             COMPRA ORA!
           </button>
         </div>
-        <p class="font-fuck text-[96px] leading-none text-center" :style="{ color: d.colore }">{{ d.esperienza }}</p>
+        <p class="font-fuck text-[40px] md:text-[70px] lg:text-[96px] leading-none text-center" :style="{ color: d.colore }">{{ d.esperienza }}</p>
       </div>
 
       <!-- Nessuna data -->
-      <p v-if="date[meseCorrente].length === 0" class="font-testo text-[28px] text-center text-gray-400 py-10">
+      <p v-if="date[meseCorrente].length === 0" class="font-testo text-[20px] md:text-[28px] text-center text-gray-400 py-10">
         Nessuna data disponibile per questo mese.
       </p>
     </div>
 
     <!-- Torna alle esperienze -->
-    <router-link to="/esperienze" class="mt-12">
-      <div class="bg-[#ff0000] rounded-full px-8 py-3">
-        <span class="font-testo text-[24px] text-white">Torna alle esperienze</span>
+    <router-link to="/esperienze" class="mt-8 md:mt-12">
+      <div class="bg-[#ff0000] rounded-full px-6 md:px-8 py-2 md:py-3">
+        <span class="font-testo text-[18px] md:text-[24px] text-white">Torna alle esperienze</span>
       </div>
     </router-link>
 

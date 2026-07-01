@@ -13,8 +13,6 @@ import albaorizzontale from '../../assets/alba/albaorizzontale.png'
 import cerchio from '../../assets/alba/cerchio.png'
 import persone from '../../assets/alba/persone.png'
 
-// assets rettangolo (nessuno)
-
 onMounted(() => {
   gsap.set('.alba-rettangolo', { opacity: 0, x: 200 })
   gsap.to('.alba-rettangolo', {
@@ -56,8 +54,6 @@ onMounted(() => {
   })
 })
 
-// assets testo (nessuno)
-
 // assets stilevolo
 import peperoncino from '../../assets/alba/peperoncino.png'
 import bustina from '../../assets/alba/bustina.png'
@@ -91,39 +87,39 @@ function toggle(i) { aperto.value = aperto.value === i ? null : i }
   <section class="relative w-full h-screen">
     <img :src="albaorizzontale" alt="" class="absolute inset-0 w-full h-full object-cover" />
     <div class="absolute inset-0 flex items-center justify-center">
-      <div class="relative flex items-center justify-center w-[500px] h-[300px]">
+      <div class="relative flex items-center justify-center w-[240px] h-[150px] md:w-[500px] md:h-[300px]">
         <img :src="cerchio" alt="" class="absolute inset-0 w-full h-full object-fill" />
-        <p class="relative font-grande text-[96px] leading-none text-center text-white">VOLO<br />ALL'ALBA</p>
+        <p class="relative font-grande text-[48px] md:text-[96px] leading-none text-center text-white">VOLO<br />ALL'ALBA</p>
       </div>
     </div>
-    <div class="absolute bottom-10 left-10">
-      <div class="flex items-center gap-4 bg-[#FFDD32] rounded-full px-8 py-4">
-        <img :src="persone" alt="" class="w-[50px] h-auto" />
-        <span class="font-testo text-[28px]">Viaggio aperto per <strong>60-99</strong></span>
+    <div class="absolute bottom-6 md:bottom-10 left-4 md:left-10">
+      <div class="flex items-center gap-2 md:gap-4 bg-[#FFDD32] rounded-full px-4 md:px-8 py-2 md:py-4">
+        <img :src="persone" alt="" class="w-[30px] md:w-[50px] h-auto" />
+        <span class="font-testo text-[16px] md:text-[28px]">Viaggio aperto per <strong>60-99</strong></span>
       </div>
     </div>
   </section>
 
   <!-- ── RETTANGOLO PREZZO ── -->
-  <div class="alba-rettangolo flex justify-end px-16 -mt-[300px] relative z-10">
-    <div class="relative flex flex-col rounded-[32px] border-2 border-black overflow-hidden w-[320px] bg-[#FFFCE0]">
-      <div class="flex flex-col items-center gap-3 px-6 py-12">
-        <span class="font-testo text-[16px] border border-black rounded-full px-4 py-1">polizza annullamento</span>
-        <router-link to="/date-viaggi" class="bg-[#FFDD32] rounded-[16px] px-8 py-3 font-fuck text-[64px] w-full text-center border-2 border-black block">scopri le date</router-link>
-        <p class="font-grande text-[32px] leading-none">190 €</p>
-        <p class="font-testo text-[16px] -mt-4">paga a rate senza interessi</p>
-        <p class="font-grande text-[32px] leading-none">60min</p>
+  <div class="alba-rettangolo flex justify-center md:justify-end px-4 md:px-16 -mt-[100px] md:-mt-[300px] relative z-10">
+    <div class="relative flex flex-col rounded-[32px] border-2 border-black overflow-hidden w-[240px] md:w-[320px] bg-[#FFFCE0]">
+      <div class="flex flex-col items-center gap-2 md:gap-3 px-4 md:px-6 py-6 md:py-12">
+        <span class="font-testo text-[12px] md:text-[16px] border border-black rounded-full px-3 md:px-4 py-1">polizza annullamento</span>
+        <router-link to="/date-viaggi" class="bg-[#FFDD32] rounded-[16px] px-4 md:px-8 py-2 md:py-3 font-fuck text-[36px] md:text-[64px] w-full text-center border-2 border-black block">scopri le date</router-link>
+        <p class="font-grande text-[24px] md:text-[32px] leading-none">190 €</p>
+        <p class="font-testo text-[12px] md:text-[16px] -mt-2 md:-mt-4">paga a rate senza interessi</p>
+        <p class="font-grande text-[24px] md:text-[32px] leading-none">60min</p>
       </div>
       <div class="bg-[#FFDD32] py-1 text-center border-t-2 border-black">
-        <span class="font-fuck text-[80px] leading-none">RELAX</span>
+        <span class="font-fuck text-[50px] md:text-[80px] leading-none">RELAX</span>
       </div>
     </div>
   </div>
 
   <!-- ── TESTO ── -->
-  <section class="px-16 py-10 max-w-[1100px] -mt-[150px]">
-    <h2 class="font-grande text-[117px] leading-tight mb-8">IL VOLO IN BREVE</h2>
-    <p class="font-testo text-[24px] leading-relaxed">
+  <section class="px-6 md:px-16 py-8 md:py-10 max-w-[1100px] -mt-[60px] md:-mt-[150px]">
+    <h2 class="font-grande text-[55px] md:text-[90px] lg:text-[117px] leading-tight mb-6 md:mb-8">IL VOLO IN BREVE</h2>
+    <p class="font-testo text-[18px] md:text-[24px] leading-relaxed">
       Si riparte all'alba, quando il mondo dorme e le articolazioni scricchiolano come vinili usurati.
       Saliremo sulle nostre mongolfiere con lo spirito di chi ha già vissuto tutto… e ha deciso di rifarlo dall'alto.
       Il sole sorgerà lento, noi pure, tra nuvole, brindisi e ricordi che tornano più lucidi del caffè.
@@ -136,67 +132,67 @@ function toggle(i) { aperto.value = aperto.value === i ? null : i }
   </section>
 
   <!-- ── STILEVOLO ── -->
-  <section class="flex items-center justify-center gap-8 px-16 py-10">
-    <div class="flex flex-col items-center justify-center gap-2 border-4 border-[#FFDD32] rounded-[32px] px-6 py-4 w-[280px] h-[280px]">
-      <img :src="peperoncino" alt="" class="w-[100px] h-[110px] object-contain" />
-      <p class="font-fuck text-[64px]">SESSO</p>
+  <section class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 px-6 md:px-16 py-8 md:py-10">
+    <div class="flex flex-col items-center justify-between border-4 border-[#FFDD32] rounded-[32px] px-4 md:px-6 py-6 w-[200px] md:w-[280px] h-[200px] md:h-[280px]">
+      <img :src="peperoncino" alt="" class="h-[80px] md:h-[110px] w-auto object-contain" />
+      <p class="font-fuck text-[46px] md:text-[64px]">SESSO</p>
       <div class="flex gap-2">
-        <span class="w-[32px] h-[12px] rounded-full bg-[#ff0000]"></span>
-        <span class="w-[32px] h-[12px] rounded-full bg-gray-300"></span>
-        <span class="w-[32px] h-[12px] rounded-full bg-gray-300"></span>
-        <span class="w-[32px] h-[12px] rounded-full bg-gray-300"></span>
-        <span class="w-[32px] h-[12px] rounded-full bg-gray-300"></span>
+        <span class="w-[24px] md:w-[32px] h-[10px] md:h-[12px] rounded-full bg-[#ff0000]"></span>
+        <span class="w-[24px] md:w-[32px] h-[10px] md:h-[12px] rounded-full bg-gray-300"></span>
+        <span class="w-[24px] md:w-[32px] h-[10px] md:h-[12px] rounded-full bg-gray-300"></span>
+        <span class="w-[24px] md:w-[32px] h-[10px] md:h-[12px] rounded-full bg-gray-300"></span>
+        <span class="w-[24px] md:w-[32px] h-[10px] md:h-[12px] rounded-full bg-gray-300"></span>
       </div>
     </div>
-    <div class="flex flex-col items-center justify-center gap-2 border-4 border-[#FFDD32] rounded-[32px] px-6 py-4 w-[280px] h-[280px]">
-      <img :src="bustina" alt="" class="w-[100px] h-[110px] object-contain" />
-      <p class="font-fuck text-[64px]">DROGA</p>
+    <div class="flex flex-col items-center justify-between border-4 border-[#FFDD32] rounded-[32px] px-4 md:px-6 py-6 w-[200px] md:w-[280px] h-[200px] md:h-[280px]">
+      <img :src="bustina" alt="" class="h-[80px] md:h-[110px] w-auto object-contain" />
+      <p class="font-fuck text-[46px] md:text-[64px]">DROGA</p>
       <div class="flex gap-2">
-        <span class="w-[32px] h-[12px] rounded-full bg-gray-300"></span>
-        <span class="w-[32px] h-[12px] rounded-full bg-gray-300"></span>
-        <span class="w-[32px] h-[12px] rounded-full bg-gray-300"></span>
-        <span class="w-[32px] h-[12px] rounded-full bg-gray-300"></span>
-        <span class="w-[32px] h-[12px] rounded-full bg-gray-300"></span>
+        <span class="w-[24px] md:w-[32px] h-[10px] md:h-[12px] rounded-full bg-gray-300"></span>
+        <span class="w-[24px] md:w-[32px] h-[10px] md:h-[12px] rounded-full bg-gray-300"></span>
+        <span class="w-[24px] md:w-[32px] h-[10px] md:h-[12px] rounded-full bg-gray-300"></span>
+        <span class="w-[24px] md:w-[32px] h-[10px] md:h-[12px] rounded-full bg-gray-300"></span>
+        <span class="w-[24px] md:w-[32px] h-[10px] md:h-[12px] rounded-full bg-gray-300"></span>
       </div>
     </div>
-    <div class="flex flex-col items-center justify-center gap-2 border-4 border-[#FFDD32] rounded-[32px] px-6 py-4 w-[280px] h-[280px]">
-      <img :src="manocorna" alt="" class="w-[100px] h-[110px] object-contain" />
-      <p class="font-fuck text-[64px]">N ROOL</p>
+    <div class="flex flex-col items-center justify-between border-4 border-[#FFDD32] rounded-[32px] px-4 md:px-6 py-6 w-[200px] md:w-[280px] h-[200px] md:h-[280px]">
+      <img :src="manocorna" alt="" class="h-[80px] md:h-[110px] w-auto object-contain" />
+      <p class="font-fuck text-[46px] md:text-[64px]">N ROOL</p>
       <div class="flex gap-2">
-        <span class="w-[32px] h-[12px] rounded-full bg-[#ff0000]"></span>
-        <span class="w-[32px] h-[12px] rounded-full bg-gray-300"></span>
-        <span class="w-[32px] h-[12px] rounded-full bg-gray-300"></span>
-        <span class="w-[32px] h-[12px] rounded-full bg-gray-300"></span>
-        <span class="w-[32px] h-[12px] rounded-full bg-gray-300"></span>
+        <span class="w-[24px] md:w-[32px] h-[10px] md:h-[12px] rounded-full bg-[#ff0000]"></span>
+        <span class="w-[24px] md:w-[32px] h-[10px] md:h-[12px] rounded-full bg-gray-300"></span>
+        <span class="w-[24px] md:w-[32px] h-[10px] md:h-[12px] rounded-full bg-gray-300"></span>
+        <span class="w-[24px] md:w-[32px] h-[10px] md:h-[12px] rounded-full bg-gray-300"></span>
+        <span class="w-[24px] md:w-[32px] h-[10px] md:h-[12px] rounded-full bg-gray-300"></span>
       </div>
     </div>
   </section>
 
   <!-- ── FOTO ORIZZONTALE ── -->
-  <section class="flex items-end justify-center px-16 py-10 gap-0">
-    <div class="alba-rettangolo-giallo bg-[#FFDD32] rounded-[32px] flex flex-col items-center justify-center px-10 py-12 shrink-0 w-[360px] mb-20">
-      <p class="font-fuck text-[96px] leading-tight text-center">Volo ALBA</p>
-      <p class="font-testo text-[24px] leading-tight mt-4 text-center">Vola<br />nell'esperienza</p>
+  <section class="flex flex-col md:flex-row items-center md:items-end justify-center px-6 md:px-16 py-8 md:py-10 gap-4 md:gap-0">
+    <div class="alba-rettangolo-giallo bg-[#FFDD32] rounded-[32px] flex flex-col items-center justify-center px-6 md:px-10 py-8 md:py-12 w-full md:w-[360px] md:mb-20">
+      <p class="font-fuck text-[60px] md:text-[96px] leading-tight text-center">Volo ALBA</p>
+      <p class="font-testo text-[18px] md:text-[24px] leading-tight mt-2 md:mt-4 text-center">Vola<br />nell'esperienza</p>
     </div>
-    <div class="w-[600px] shrink-0 -ml-1">
-      <img :src="foreveryoung" alt="" class="alba-foto-dx w-full h-auto rounded-[32px] object-cover" />
+    <div class="w-full md:w-[600px] md:shrink-0 md:-ml-1">
+      <img :src="foreveryoung" alt="" class="alba-foto-dx w-full h-auto md:h-auto rounded-[32px] object-cover" />
     </div>
   </section>
 
   <!-- ── ACCORDION ── -->
-  <section class="flex flex-col gap-4 px-16 py-10">
+  <section class="flex flex-col gap-4 px-6 md:px-16 py-8 md:py-10">
     <div v-for="(voce, i) in voci" :key="i"
       class="bg-[#FFDD32] rounded-[32px] overflow-hidden cursor-pointer"
       @click="toggle(i)"
     >
-      <div class="flex items-center justify-between px-10 py-6">
-        <span class="font-grande text-[72px] leading-none">{{ voce.titolo }}</span>
-        <span class="font-grande text-[52px] leading-none" :class="aperto === i ? 'text-[#ff0000]' : 'text-[#3DD8FC]'">
+      <div class="flex items-center justify-between px-6 md:px-10 py-4 md:py-6">
+        <span class="font-grande text-[36px] md:text-[60px] lg:text-[72px] leading-none">{{ voce.titolo }}</span>
+        <span class="font-grande text-[32px] md:text-[52px] leading-none" :class="aperto === i ? 'text-[#ff0000]' : 'text-[#3DD8FC]'">
           {{ aperto === i ? '×' : '+' }}
         </span>
       </div>
-      <div v-if="aperto === i" class="px-10 pb-8">
-        <p class="font-testo text-[24px] leading-relaxed">{{ voce.testo }}</p>
+      <div v-if="aperto === i" class="px-6 md:px-10 pb-6 md:pb-8">
+        <p class="font-testo text-[17px] md:text-[24px] leading-relaxed">{{ voce.testo }}</p>
       </div>
     </div>
   </section>
@@ -206,17 +202,17 @@ function toggle(i) { aperto.value = aperto.value === i ? null : i }
   <DomandeFrequenti />
 
   <!-- ── FINALE ── -->
-  <section class="flex flex-col px-8 py-10 gap-8">
-    <h2 class="font-grande text-[96px] leading-tight text-center uppercase">Ecco un assaggio dei<br />nostri voli</h2>
-    <div class="flex gap-2 w-full">
-      <img :src="foto1" alt="" class="flex-1 h-[400px] object-cover" />
-      <img :src="foto2" alt="" class="flex-1 h-[400px] object-cover" />
-      <img :src="foto3" alt="" class="flex-1 h-[400px] object-cover" />
+  <section class="flex flex-col px-4 md:px-8 py-8 md:py-10 gap-6 md:gap-8">
+    <h2 class="font-grande text-[50px] md:text-[75px] lg:text-[96px] leading-tight text-center uppercase">Ecco un assaggio dei<br />nostri voli</h2>
+    <div class="flex flex-col md:flex-row gap-2 w-full">
+      <img :src="foto1" alt="" class="flex-1 h-[250px] md:h-[400px] object-cover" />
+      <img :src="foto2" alt="" class="flex-1 h-[250px] md:h-[400px] object-cover" />
+      <img :src="foto3" alt="" class="flex-1 h-[250px] md:h-[400px] object-cover" />
     </div>
-    <div class="flex items-center justify-between px-8">
-      <img :src="faccia2" alt="" class="w-[200px] h-auto" />
-      <img :src="logogiallo" alt="Nadamás" class="w-[200px] h-auto" />
-      <img :src="faccia5" alt="" class="w-[200px] h-auto" />
+    <div class="flex items-center justify-between px-4 md:px-8">
+      <img :src="faccia2" alt="" class="w-[100px] md:w-[200px] h-auto" />
+      <img :src="logogiallo" alt="Nadamás" class="w-[100px] md:w-[200px] h-auto" />
+      <img :src="faccia5" alt="" class="w-[100px] md:w-[200px] h-auto" />
     </div>
   </section>
 
