@@ -1,5 +1,5 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Homepage from './components/homepage/Homepage.vue'
+import { createRouter, createWebHashHistory } from 'vue-router'
+import Homepage from './components/Homepage/Homepage.vue'
 import Esperienze from './components/Esperienze/Esperienze.vue'
 import ChiSiamo from './components/ChiSiamo/ChiSiamo.vue'
 import Shop from './components/Shop.vue'
@@ -20,7 +20,7 @@ const routes = [
 ]
 
 const router = createRouter({
-	history: createWebHistory(),
+	history: createWebHashHistory(),
 	routes,
 	scrollBehavior() {
 		return { top: 0 }
